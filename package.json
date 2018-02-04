@@ -1,0 +1,14 @@
+{
+  "name": "microservice-i18n",
+  "version": "1.0.0",
+  "description": "This is microservice i18n module.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/v-cube/microservice-module-i18n.git"
+  },
+  "dependencies": {
+    "i18n": "~0.8.3"
+  }
+}

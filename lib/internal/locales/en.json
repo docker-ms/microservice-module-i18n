@@ -1,0 +1,86 @@
+{
+  "UnkownError": "Oops, something goes wrong, please try again later...",
+
+  "EmailTpl": {
+    "VerifyEmail": {
+      "description": "Verify company email address.",
+      "subject": "[V-CUBE GATE Service] Enterprise Email Verification",
+      "htmlBody": "To {{COMPANY_NAME}},<br><br>Thank you for choosing <b>V-CUBE GATE service</b>.Please click the below link to verify your email address:<br><br><a href='{{VERIFICATION_LINK}}' target='_blank'>{{VERIFICATION_LINK}}</a><br><br>If you cannot click the link directly from this email, please copy and paste the link to your browser address bar for proceeding.<br><br>V-cube Singapore Pte. Ltd.<br>+65-6636-5862<br>10 Collyer Quay #03-06 Ocean Financial Centre Singapore 049315<br><br><br>"
+    },
+    "DeliverInitialPwd": {
+      "description": "Deliver the initial password to an enterprise user after he/she gets registered.",
+      "subject": "[V-CUBE GATE Service] Account Initial Password",
+      "htmlBody": "Dear {{USERNAME}},<br><br>Thank you for choosing <b>V-CUBE GATE service</b>.<br><br>Your initial password is:<b>{{INITIAL_PWD}}</b>, now you can use this password and this email address to login V-CUBE GATE to set your new password.<br><br>Wish you have a great life everyday.<br><br>V-cube Singapore Pte. Ltd.<br>+65-6636-5862<br>10 Collyer Quay #03-06 Ocean Financial Centre Singapore 049315<br><br><br>"
+    },
+    "BatchRegistFeedback": {
+      "description": "Feedback for enterprise user batch regist.",
+      "subject": "[V-CUBE GATE Service] Enterprise User Batch Regist Feedback",
+      "htmlBody": "To {{COMPANY_NAME}},<br><br>Thank you for choosing <b>V-CUBE GATE service</b>, below is the feedback of the batch regist you requested to us:<br><br>Summaries:<br><ul><li>We totally processed <b>{{PROCESSED_NO}}</b> users</li><li><b>{{SUCCESS_NO}}</b> users successfully got registered</li><li><b>{{FAIL_NO}}</b> users failed to get registered</li></ul>{{{MORE_DETAILS}}}V-cube Singapore Pte. Ltd.<br>+65-6636-5862<br>10 Collyer Quay #03-06 Ocean Financial Centre Singapore 049315<br><br>",
+      "FeedbackDetails": {
+        "description": "Indicate single user regist failure reason, will be put in above 'DETAILS'.",
+        "title": "More details:<br>",
+        "emailExisted": "<li><b>{{REAL_NAME}}</b>: someone has already taken this email: <b>{{EMAIL}}</b></li>",
+        "mobilePhoneNoExisted": "<li><b>{{REAL_NAME}}</b>: someone has already taken this mobile phone number: <b>{{MOBILE_PHONE_NO}}</b></li>",
+        "emailOrMobilePhoneNoTaken": "<li><b>{{REAL_NAME}}</b>: someone has already taken this email: {{EMAIL}} or mobile phone number: {{MOBILE_PHONE_NO}}</li>"
+      }
+    }
+  },
+
+  "VerificationMsgs": {
+    "Email": {
+      "successfullyVerified": "Your email has been successfully verified.",
+      "invalidToken": "Invalid verification link.",
+      "expiredToken": {
+        "company": "Verification link has expired, please contact with V-CUBE Singapore (+65-6636-5862) for assistance."
+      },
+      "alreadyVerified": "You email has already been verified.",
+      "invalidCompany": "Your provide an invalid company, please contact with V-CUBE Singapore (+65-6636-5862) for assistance."
+    },
+    "SMS": {
+
+    }
+  },
+
+  "CsvTpl": {
+    "UserBatchRegist": {
+      "description": "CSV template for enterprise user batch regist.",
+      "filename": "VCUBE_enterprise_user_batch_regist.csv",
+      "title": "[V-CUBE GATE Service] Enterprise User Batch Regist Template",
+      "forCompany": {
+        "title": "For company:",
+        "id": ",Company Id: *****{{COMPANY_ID}}*****",
+        "name": ",Company Name: {{COMPANY_NAME}}"
+      },
+      "instruction": {
+        "title": "Instructions:",
+        "items": [
+          "\"1. Item with (*) is mandatory.\"",
+          ",\"2. You should not adjust the items' order.\"",
+          ",\"3. After the whole regist process is completed, system will email you with the feedback via the email you provided when you create the company.\"",
+          ",\"4. After the whole regist process is completed, system will also send the INITIAL PASSWORD EMAIL/SMS to each individual.\"",
+          ",\"5. All feedback(EMAIL/SMS) will be in the language same as this template and also is indicated in the below field <Feedback in:>, change the value WILL NOT cause the feedback be sent in the value you set but be sent in ENGLISH.\"",
+          ",\"6. For 'Gender', put female as 'F', male as 'M', and others as 'O'.\"",
+          ",\"7. Email or mobile phone number must have one.\"",
+          ",\"8. Mobile phone number must contain country calling code, e.g.: 65-12345678\""
+        ]
+      },
+      "feedbackInLang": "Feedback in:,*****{{FEEDBACK_IN_LANG}}*****",
+      "warning": "\"-----Please do not change anything above, or else will cause unexpected failure in the regist process.-----\"",
+      "items": [
+        "Name (*)",
+        "Gender(F/M/O)",
+        "Email",
+        "Mobile Phone No.(e.g.: 65-12345678)"
+      ],
+      "keys": [
+        "realName",
+        "gender",
+        "email",
+        "mobilePhoneNo"
+      ]
+    }
+  }
+
+}
+
+

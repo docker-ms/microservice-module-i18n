@@ -1,0 +1,66 @@
+{
+
+  "EmailTpl": {
+    "VerifyEmail": {
+      "description": "Verify company email address.",
+      "subject": "[V-CUBE GATE 服务]专业版电子邮件认证",
+      "htmlBody": "{{COMPANY_NAME}}：<br><br>感谢您选择<b>V-CUBE GATE 服务</b>。请点击下方链接以认证您的电子邮件地址：<br><br><a href='{{VERIFICATION_LINK}}' target='_blank'>{{VERIFICATION_LINK}}</a><br><br>如果您无法从该邮件直接点击链接，请复制粘贴链接地址到您任意浏览器的地址栏已进行后续操作。<br><br>V-cube Singapore Pte. Ltd.<br>+65-6636-5862<br>10 Collyer Quay #03-06 Ocean Financial Centre Singapore 049315"
+    },
+    "DeliverInitialPwd": {
+      "description": "Deliver the initial password to an enterprise user after he/she gets registered.",
+      "subject": "[V-CUBE GATE 服务]账户初始密码",
+      "htmlBody": "尊敬的{{USERNAME}}：<br><br>感谢您选择<b>V-CUBE GATE 服务</b>.<br><br>您账户的初始密码为：<b>{{INITIAL_PWD}}</b>，请使用该电子邮件地址及密码登陆V-CUBE GATE重新设置您的账号密码。<br><br>祝您生活愉快。<br><br>V-cube Singapore Pte. Ltd.<br>+65-6636-5862<br>10 Collyer Quay #03-06 Ocean Financial Centre Singapore 049315"
+    }
+  },
+
+  "EmailVerificationMsgs": {
+    "successfullyVerified": "验证成功",
+    "invalidToken": "非法的链接",
+    "expiredToken": {
+      "company": "验证链接已过期，请联系V-CUBE Singapore (+65-6636-5862)重新发送验证链接。"
+    },
+    "alreadyVerified": "您的电子邮件已成功验证，无需再次操作。"
+  },
+
+  "CsvTpl": {
+    "UserBatchRegist": {
+      "description": "CSV template for enterprise user batch regist.",
+      "filename": "VCUBE-专业版用户批量注册模版.csv",
+      "title": "[V-CUBE GATE 服务]专业版用户批量注册模版",
+      "forCompany": {
+        "title": "目标公司：",
+        "id": ",公司ID：*****{{COMPANY_ID}}*****",
+        "name": ",公司名称：{{COMPANY_NAME}}"
+      },
+      "instruction": {
+        "title": "填写说明：",
+        "items": [
+          "\"1. 项目旁边有(*)的是必填项目。\"",
+          ",\"2. 请严格按照模版的要求填写要求的信息，不要调整项目的顺序。\"",
+          ",\"3. 当整个注册过程完成后，系统将会发送反馈信息至您创建公司时所留的电子邮件地址。\"",
+          ",\"4. 当整个创建过程完成后，系统亦会发送账号初始密码邮件／短消息至每个员工。\"",
+          ",\"5. 系统的反馈邮件以及初始密码邮件／短消息將使用与本模版相同的语言，亦即下方<反馈邮件使用：>项目所显示的语言，但是您不能修改该值，修改该值将导致系统的反馈邮件以及初始密码邮件／短消息使用英语。\"",
+          ",\"6. 对每个员工，电子邮件地址或者手机号必须至少填写一个。\"",
+          ",\"7. 电话号码必须包含国家代码，如：86-15012345678\""
+        ]
+      },
+      "feedbackInLang": "反馈信息使用：,*****{{FEEDBACK_IN_LANG}}*****",
+      "warning": "\"请勿修改此行以上的任意内容，否则将会导致注册过程中不可预知的错误。\"",
+      "items": [
+        "姓名(*)",
+        "性别(男／女/其它)",
+        "电子邮件地址",
+        "手机号码（如：86-15112345678）"
+      ],
+      "keys": [
+        "realName",
+        "gender",
+        "email",
+        "mobilePhoneNo"
+      ]
+    }
+  }
+  
+}
+
+
